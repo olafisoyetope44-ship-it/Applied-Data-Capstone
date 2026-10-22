@@ -62,7 +62,7 @@ The notebook's old execution outputs were cleared because the preprocessing work
 - [Project report](Winning%20Space%20Race%20with%20Data%20Science.pdf)
 
 ### Dashboard
-The interactive dashboard source is in [app.py](app.py). It is being updated to use the dataset included in this repository and current Dash imports.
+The interactive dashboard source is in [app.py](app.py). It reads the committed `dataset_part_2.csv` file and uses current Dash imports.
 
 ## Run the dashboard locally
 
