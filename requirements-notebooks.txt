@@ -1,7 +1,11 @@
-# Core dependencies for running the analysis and machine-learning notebooks
+# Core dependencies for the analysis, data collection, geospatial and machine-learning notebooks
 pandas>=2.0,<4.0
 numpy>=1.24,<3.0
 matplotlib>=3.7,<4.0
 seaborn>=0.12,<1.0
 scikit-learn>=1.3,<2.0
 jupyter>=1.0,<2.0
+requests>=2.31,<3.0
+beautifulsoup4>=4.12,<5.0
+folium>=0.15,<1.0
+wget>=3.2,<4.0
