@@ -35,18 +35,11 @@ The existing notebooks report several patterns worth investigating further:
 - **Launch history provides context:** the notebook describes an upward trend in landing success over the period covered by the dataset.
 - **Payload and flight number are useful exploratory variables:** the visual analysis examines how they relate to landing outcomes, although these relationships should not be interpreted as proof of causation.
 
-### Initial model comparison
+### Model evaluation status
 
-The saved machine-learning notebook uses a 90-record modelling dataset, a train/test split with 18 records in the test set, and cross-validation for hyperparameter selection.
+The machine-learning notebook has been updated to load the committed datasets, split the data before fitting the scaler, remove the deprecated decision-tree `max_features='auto'` option, and compare models using precision, recall, F1-score, and confusion matrices alongside accuracy.
 
-| Model | Cross-validation accuracy | Test accuracy |
-|---|---:|---:|
-| Logistic Regression | 84.6% | 83.3% |
-| Support Vector Machine | 84.8% | 83.3% |
-| Decision Tree | **87.3%** | 83.3% |
-| K-Nearest Neighbours | 84.8% | 83.3% |
-
-These values are taken from the saved notebook outputs, not from a fresh execution in this repository review. The Decision Tree has the highest recorded cross-validation accuracy, but all four models have the same recorded test accuracy. With only 18 test records, these results are preliminary; they should be supplemented with class-level precision, recall, F1-score, confusion-matrix counts, and more robust validation before drawing strong conclusions.
+The notebook's old execution outputs were cleared because the preprocessing workflow changed; the earlier saved metrics should not be treated as results from the revised workflow. Re-run the notebook from top to bottom to generate fresh, reproducible results before quoting model performance in an application or interview.
 
 ## Repository guide
 
@@ -59,6 +52,7 @@ These values are taken from the saved notebook outputs, not from a fresh executi
 - [Standalone SQLite analysis queries](sql/analysis_queries.sql)
 - [Interactive mapping with Folium](Interactive%20Visual%20Analytics%20with%20Folium.ipynb)
 - [Machine-learning model comparison](Machine%20Learning%20Prediction.ipynb)
+- [Notebook dependencies](requirements-notebooks.txt)
 
 ### Data and reporting
 - [Prepared launch dataset](dataset_part_2.csv)
