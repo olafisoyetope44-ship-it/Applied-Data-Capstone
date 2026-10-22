@@ -55,7 +55,8 @@ These values are taken from the saved notebook outputs, not from a fresh executi
 - [Data collection with web scraping](Data%20Collection%20with%20Web%20Scraping.ipynb)
 - [Data wrangling](Data%20Wrangling.ipynb)
 - [Exploratory analysis and visualisation](EDA%20with%20Data%20Visualization.ipynb)
-- [SQL analysis](EDA%20with%20SQL.ipynb)
+- [SQL analysis notebook](EDA%20with%20SQL.ipynb)
+- [Standalone SQLite analysis queries](sql/analysis_queries.sql)
 - [Interactive mapping with Folium](Interactive%20Visual%20Analytics%20with%20Folium.ipynb)
 - [Machine-learning model comparison](Machine%20Learning%20Prediction.ipynb)
 
@@ -79,6 +80,10 @@ Use Python 3.10 or newer if possible.
 4. Open the local URL printed in your terminal.
 
 The dashboard uses the prepared launch dataset in this repository. Notebook dependencies may vary by notebook, and some original course notebooks may contain cloud-service setup cells that require adaptation to run in a local environment.
+
+### Run the standalone SQL queries
+
+The queries in [`sql/analysis_queries.sql`](sql/analysis_queries.sql) use SQLite syntax. Import `dataset_part_2.csv` into a local SQLite database as a table named `launches`, preserving the column headers, then run the queries. They cover launch-site and orbit success rates, yearly trends, payload comparisons, booster flight counts, and basic data-quality checks.
 
 ## Tools and skills demonstrated
 
