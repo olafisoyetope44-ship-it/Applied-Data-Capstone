@@ -35,11 +35,31 @@ The existing notebooks report several patterns worth investigating further:
 - **Launch history provides context:** the notebook describes an upward trend in landing success over the period covered by the dataset.
 - **Payload and flight number are useful exploratory variables:** the visual analysis examines how they relate to landing outcomes, although these relationships should not be interpreted as proof of causation.
 
-### Model evaluation status
+### Model evaluation status (OLD)
 
 The machine-learning notebook has been updated to load the committed datasets, split the data before fitting the scaler, remove the deprecated decision-tree `max_features='auto'` option, and compare models using precision, recall, F1-score, and confusion matrices alongside accuracy.
 
 The notebook's old execution outputs were cleared because the preprocessing workflow changed; the earlier saved metrics should not be treated as results from the revised workflow. Re-run the notebook from top to bottom to generate fresh, reproducible results before quoting model performance in an application or interview.
+
+
+### Model Evaluation (NEW)
+
+Four classification models were evaluated to explore whether historical launch characteristics could help classify first-stage landing outcomes.
+
+| Model | Test Accuracy | Precision | Recall | F1-Score |
+|---|---:|---:|---:|---:|
+| Logistic Regression | 77.8% | 78.6% | 91.7% | 84.6% |
+| Support Vector Machine | 77.8% | 78.6% | 91.7% | 84.6% |
+| Decision Tree | 77.8% | 83.3% | 83.3% | 83.3% |
+| K-Nearest Neighbours | 77.8% | 75.0% | 100.0% | 85.7% |
+
+The Decision Tree achieved the highest mean cross-validation accuracy at approximately **90.4%**. However, all four models achieved the same accuracy on the held-out test set.
+
+**How to interpret these results:** The K-Nearest Neighbours model achieved the highest recall and F1-score in the reported test results, while the Decision Tree had the highest precision among the four models. The appropriate model depends on the relative importance of missed successful landings versus incorrect positive classifications.
+
+**Important limitation:** The test set contains only 18 launches. A single prediction therefore has a substantial effect on the reported metrics. The cross-validation result is encouraging but does not establish that the model will generalise to new launches. These models are exploratory and should not be used for operational launch decisions.
+
+The analysis compares model performance using accuracy, precision, recall, F1-score and confusion matrices rather than relying on accuracy alone.
 
 ## Repository guide
 
