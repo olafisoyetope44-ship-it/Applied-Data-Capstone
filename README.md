@@ -91,10 +91,19 @@ Explore my interactive SpaceX launch dashboard, built with Python, Dash and Plot
 
 ## 🚀 Live Interactive Dashboard
 
-[**Launch Dashboard — Explore the Data Here**](https://applied-data-capstone.onrender.com/)
+**[Launch the SpaceX Dashboard](https://applied-data-capstone.onrender.com)**
 
-Use the interactive filters and charts to explore launch outcomes, payload ranges, launch sites and success rates.
+Explore SpaceX launch data through an interactive dashboard built with Python, Dash and Plotly.
 
+- 📊 Interactive charts and visualisations
+- 🎯 Filter launches by launch site
+- 📦 Explore payload mass ranges
+- 🛰️ Analyse launch and landing outcomes
+- 📈 Compare success rates across launch sites
+
+**Tech Stack:** Python · Pandas · Plotly · Dash
+
+The dashboard is hosted on Render. If it has been idle, the first visit may take a little time to load.
 ## Project Preview
 
 ![SpaceX Dashboard](images/dashboardpreview.png)
