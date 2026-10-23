@@ -106,8 +106,9 @@ Explore SpaceX launch data through an interactive dashboard built with Python, D
 The dashboard is hosted on Render. If it has been idle, the first visit may take a little time to load.
 ## Project Preview
 
-![SpaceX Dashboard](images/dashboardpreview.png)
-![SpaceX Dashboard](images/dashboardpreview2.png)
+![SpaceX Dashboard Preview](images/dashboardpreview.png)
+
+![SpaceX Dashboard Preview 2](images/dashboardpreview2.png)
 ## Run the dashboard locally
 
 Use Python 3.10 or newer if possible.
