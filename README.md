@@ -82,8 +82,23 @@ The analysis compares model performance using accuracy, precision, recall, F1-sc
 - [Project report](Winning%20Space%20Race%20with%20Data%20Science.pdf)
 
 ### Dashboard
-The interactive dashboard source is in [app.py](app.py). It reads the committed `dataset_part_2.csv` file and uses current Dash imports.
+The interactive dashboard source is in [app.py](app.py). It reads the committed `dataset_part_2.csv` file and uses current Dash imports. 
 
+
+# SpaceX Launch Data Analysis
+
+Explore my interactive SpaceX launch dashboard, built with Python, Dash and Plotly.
+
+## 🚀 Live Interactive Dashboard
+
+[**Launch Dashboard — Explore the Data Here**](https://applied-data-capstone.onrender.com/)
+
+Use the interactive filters and charts to explore launch outcomes, payload ranges, launch sites and success rates.
+
+## Project Preview
+
+![SpaceX Dashboard](images/dashboard preview 2.png)
+![SpaceX Dashboard](images/dashboard preview.png)
 ## Run the dashboard locally
 
 Use Python 3.10 or newer if possible.
