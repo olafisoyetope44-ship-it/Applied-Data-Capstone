@@ -1,6 +1,45 @@
-"""Interactive dashboard for exploring Falcon 9 landing outcomes.
 
-Run locally with: python app.py
+### Interactive Dashboard
+
+The project includes a Python dashboard built with Plotly Dash. It allows users to explore historical Falcon 9 launch outcomes interactively.
+
+**Dashboard features**
+- Filter launches by launch site.
+- Adjust the payload mass range in kilograms.
+- Compare recorded successful and unsuccessful landing outcomes.
+- Explore the relationship between payload mass and landing outcome.
+
+The dashboard is intended for exploratory analysis. It describes patterns in historical data rather than predicting the safety or outcome of a future launch.
+
+**Run locally**
+
+```bash
+git clone https://github.com/olafisoyetope44-ship-it/Applied-Data-Capstone.git
+cd Applied-Data-Capstone
+python -m venv .venv
+```
+
+Activate the environment:
+
+Windows:
+```bash
+.venv\Scripts\activate
+```
+
+macOS/Linux:
+```bash
+source .venv/bin/activate
+```
+
+Install the dashboard dependencies and start the application:
+
+```bash
+python -m pip install -r requirements.txt
+python app.py
+```
+
+Open the local address displayed in the terminal.
+
 """
 from pathlib import Path
 
