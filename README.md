@@ -97,8 +97,8 @@ Use the interactive filters and charts to explore launch outcomes, payload range
 
 ## Project Preview
 
-![SpaceX Dashboard](images/dashboard preview 2.png)
-![SpaceX Dashboard](images/dashboard preview.png)
+![SpaceX Dashboard](images/dashboardpreview.png)
+![SpaceX Dashboard](images/dashboardpreview2.png)
 ## Run the dashboard locally
 
 Use Python 3.10 or newer if possible.
