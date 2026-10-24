@@ -41,22 +41,22 @@ These are descriptive patterns, not evidence of causation. Results depend on the
 
 ## Machine-learning evaluation
 
-Four classification models were compared to explore whether historical launch characteristics could help classify first-stage landing outcomes.
+Four classification models were compared to explore whether historical launch characteristics could help classify first-stage landing outcomes. The updated workflow uses stratified train/test splitting and cross-validation, fits scaling within each training fold for scale-sensitive models, and excludes high-cardinality serial identifiers and landing-pad indicators that could introduce memorisation or post-outcome information.
 
-| Model | Test accuracy | Precision | Recall | F1-score |
-|---|---:|---:|---:|---:|
-| Logistic Regression | 77.8% | 78.6% | 91.7% | 84.6% |
-| Support Vector Machine | 77.8% | 78.6% | 91.7% | 84.6% |
-| Decision Tree | 77.8% | 83.3% | 83.3% | 83.3% |
-| K-Nearest Neighbours | 77.8% | 75.0% | 100.0% | 85.7% |
+| Model | CV accuracy (training folds) | Test accuracy | Test balanced accuracy | Landing precision | Landing recall | Landing F1-score |
+|---|---:|---:|---:|---:|---:|---:|
+| Logistic Regression | 82.3% | **83.3%** | **79.2%** | 84.6% | 91.7% | 88.0% |
+| Support Vector Machine | 83.6% | 72.2% | 70.8% | 81.8% | 75.0% | 78.3% |
+| K-Nearest Neighbours | 87.8% | 72.2% | 70.8% | 81.8% | 75.0% | 78.3% |
+| Decision Tree | **90.6%** | 55.6% | 58.3% | 75.0% | 50.0% | 60.0% |
 
-The Decision Tree achieved the highest reported mean cross-validation accuracy, approximately **90.4%**. All four models achieved the same accuracy on the held-out test set.
+*Landing precision, recall, and F1-score refer to the successful-landing class (class 1). Values are rounded from the notebook's saved evaluation output.*
 
-**Interpretation:** K-Nearest Neighbours had the highest reported recall and F1-score, while the Decision Tree had the highest precision. Which metric matters most depends on the cost of different types of classification error.
+A simple majority-class baseline achieved **66.7% test accuracy** and **50.0% balanced accuracy**. Logistic Regression performed best on this held-out test set, with 83.3% accuracy and 79.2% balanced accuracy. It correctly identified 11 of the 12 successful landings in the test sample.
 
-**Important caveat:** The held-out test set contains only 18 launches, so each prediction has a substantial effect on the reported metrics. The cross-validation result is a useful comparison within this dataset, but it does not demonstrate that the model will generalise to new launches. These models are exploratory and should not be used for operational launch decisions.
+The Decision Tree achieved the highest mean cross-validation accuracy (90.6%) but only 55.6% test accuracy. This gap shows why model selection should consider held-out results and multiple metrics rather than choosing a model solely by its cross-validation score.
 
-The figures above are the results currently documented for this project. Re-run the machine-learning notebook from top to bottom before quoting these metrics in an application or interview, and ensure the saved outputs match the current code and data.
+**Important caveat:** The held-out test set contains only 18 launches, so each prediction has a substantial effect on the reported metrics. These results are preliminary and may vary with a different split or additional data. Cross-validation and a small test set do not establish that a model will generalise to future launches. These models are exploratory and should not be used for operational launch decisions.
 
 ## Interactive dashboard
 
